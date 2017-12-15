@@ -1,7 +1,11 @@
 <header>
-  <h1>First to Last</h1>
+  <h1>From First to Last</h1>
 
   <nav>
+    <p *ngIf="userThang.currentUser">
+      Hello, <b>{{userThang.currentUser.username}}</b>.
+    </p>
+    
     <a routerLink="/">Home</a>
     <a routerLink="/albums">Album List</a>
     <a *ngIf="!userThang.currentUser" routerLink="/signup">Sign Up</a>
@@ -9,16 +13,13 @@
     <button *ngIf="userThang.currentUser" (click)="startLogOutAjax()">Log Out</button>
   </nav>
 
-  <p *ngIf="userThang.currentUser">
-    Hello, <b>{{userThang.currentUser.username}}</b>.
-  </p>
-  <hr>
 </header>
+<hr>
 
 <router-outlet></router-outlet>
 
+<hr>
 <footer>
-  <hr>
   <nav>
     <a routerLink="/">Home</a>
     <a routerLink="/albums">Album List</a>
