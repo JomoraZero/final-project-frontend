@@ -1,0 +1,31 @@
+* {
+  text-align: center;
+}
+
+.spotify {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  padding: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  color: red;
+}
+
+h2 {
+  font-size: 36px;
+  color: red;
+}
+
+span {
+  color: red;
+}
+
+button {
+  display: block;
+  margin: 0 auto 10px;
+}

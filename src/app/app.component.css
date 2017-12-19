@@ -2,3 +2,57 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+h1 {
+  font-size: 40px;
+  color: black;
+}
+
+.title {
+  padding: 15px 0;
+  margin-left: 40px;
+  width: 50%;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.header {
+  padding: 40px 0;
+  width: 45%;
+}
+
+.header a {
+  padding: 0 20px;
+  color: red;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 40%;
+  padding-top: 30px;
+}
+
+hr {
+  margin: 0;
+}
+
+p {
+  float: left;
+  font-size: 18px;
+}
+
+span {
+  color: red;
+}
+
+img {
+  margin-left: 5px;
+  width: 40px;
+  height: auto;
+}
+
+button {
+  border: 1px solid red;
+}

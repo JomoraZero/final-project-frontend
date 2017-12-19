@@ -1,0 +1,26 @@
+<h2>Album Details</h2>
+
+<h3>{{postInfo.albumTitle}}</h3>
+<h4>By {{postInfo.artist}}</h4>
+<div class="spotify">
+  <div class="box">
+    <h5><b>Intro</b></h5>
+    <app-spotify-frame [spotifyId]='postInfo.firstTrackSpotify'></app-spotify-frame>
+    </div>
+    <div class="box">
+      <h5><b>Outro</b></h5>
+    <app-spotify-frame [spotifyId]='postInfo.lastTrackSpotify'></app-spotify-frame>
+  </div>
+</div>
+
+<button class="btn btn-md btn-success" *ngIf="!userThang.currentUser.favorites.includes(postInfo._id)" (click)="addUserFavorites()">
+    Add to Favorites
+  </button>
+
+  <button class="btn btn-md btn-danger" *ngIf="userThang.currentUser.favorites.includes(postInfo._id)" (click)="deleteUserFavorites()">
+    Remove from Favorites
+  </button>
+
+<p *ngIf="postInfo.owner">
+  Added by <span><b>{{postInfo.owner.username}}</b></span>
+</p>

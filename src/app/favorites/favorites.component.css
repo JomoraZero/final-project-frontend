@@ -1,0 +1,21 @@
+* {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+h2 {
+  font-size: 40px;
+  color: red;
+}

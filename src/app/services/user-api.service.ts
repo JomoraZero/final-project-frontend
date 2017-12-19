@@ -12,10 +12,16 @@ export class User {
   username: string;
   password: string;
 
+  favorites: string[];
+
   //database
   _id: string;
   createdAt: string;
   updatedAt: string;
+
+  constructor() {
+    this.favorites = [];
+  }
 }
 
 @Injectable()
@@ -76,5 +82,28 @@ export class UserApiService {
         return apiResult;
       })
     }
+
+    addUserFavorites(oneId: string) {
+    return this.httpThang.put(
+      `${environment.backendUrl}/api/albums/${oneId}/add`,
+      {},
+      {withCredentials: true}
+    ).toPromise()
+    .then((apiResult: User) => {
+      this.currentUser = apiResult;
+      return apiResult;
+    });
+  } // PUT /api/drinks
+
+  deleteUserFavorites(oneId: string) {
+    return this.httpThang.delete(
+      `${environment.backendUrl}/api/albums/${oneId}/delete`,
+      {withCredentials: true}
+    ).toPromise()
+    .then((apiResult: User) => {
+      this.currentUser = apiResult;
+      return apiResult;
+    });
+  } // DELETE /api/drinks
 
 }

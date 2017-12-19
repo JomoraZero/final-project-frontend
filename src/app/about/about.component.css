@@ -1,0 +1,23 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+}
+
+p {
+  font-size: 22px;
+  margin: 15px auto;
+}
+
+h2 {
+  font-size: 40px;
+  color: red;
+  margin-top: 20px;
+}
+
+img {
+  display: block;
+  margin: 30px auto;
+  width: 550px;
+  height: auto;
+}

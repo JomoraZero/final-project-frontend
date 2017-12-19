@@ -1,0 +1,16 @@
+form {
+  width: 30%;
+  margin: 0 auto;
+}
+
+* {
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+}
+
+button {
+  margin-bottom: 30px;
+}

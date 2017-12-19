@@ -1,16 +1,24 @@
 <header>
-  <h1>From First to Last</h1>
-
-  <nav>
+  <div class="title">
+    <h1>FROM FIRST TO LAST<img src="./assets/vinyl.png" /></h1>
     <p *ngIf="userThang.currentUser">
-      Hello, <b>{{userThang.currentUser.username}}</b>.
+      Hello, <span><b>{{userThang.currentUser.username}}</b></span>.
     </p>
-    
+  </div>
+  <nav class="header">
+
     <a routerLink="/">Home</a>
     <a routerLink="/albums">Album List</a>
+
+    <a *ngIf="userThang.currentUser" routerLink="/add-album">Add Album</a>
+    <a *ngIf="userThang.currentUser" routerLink="/favorites">Favorites</a>
+
     <a *ngIf="!userThang.currentUser" routerLink="/signup">Sign Up</a>
     <a *ngIf="!userThang.currentUser" routerLink="/login">Login</a>
-    <button *ngIf="userThang.currentUser" (click)="startLogOutAjax()">Log Out</button>
+    <a routerLink="/about">About</a>
+
+    <button class="btn btn-sm" *ngIf="userThang.currentUser" (click)="startLogOutAjax()">Log Out</button>
+
   </nav>
 
 </header>
@@ -18,12 +26,13 @@
 
 <router-outlet></router-outlet>
 
-<hr>
+<!-- <hr>
 <footer>
-  <nav>
+  <nav class="footer">
     <a routerLink="/">Home</a>
     <a routerLink="/albums">Album List</a>
+    <a routerLink="/about">About</a>
     <a *ngIf="!userThang.currentUser" routerLink="/join">Join</a>
-    <button *ngIf="userThang.currentUser" (click)="startLogOutAjax()">Log Out</button>
+    <button class="btn btn-sm btn-danger" *ngIf="userThang.currentUser" (click)="startLogOutAjax()">Log Out</button>
   </nav>
-</footer>
+</footer> -->

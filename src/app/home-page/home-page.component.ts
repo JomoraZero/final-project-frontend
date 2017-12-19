@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router} from '@angular/router';
 
-import {UserApiService} from '../services/user-api.service';
+import {UserApiService, User} from '../services/user-api.service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +11,7 @@ import {UserApiService} from '../services/user-api.service';
 export class HomePageComponent implements OnInit {
 
   constructor(
-    private userThang: UserApiService,
+    public userThang: UserApiService,
     private routerThang: Router) { }
 
   ngOnInit() {

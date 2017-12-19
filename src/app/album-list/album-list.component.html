@@ -1,0 +1,7 @@
+<h2>ALBUMS</h2>
+
+<ul>
+  <li *ngFor="let onePost of posts">
+    <h4><a routerLink="/albums/{{ onePost._id }}"> {{ onePost.albumTitle }} by {{ onePost.artist }} </a></h4>
+  </li>
+</ul>

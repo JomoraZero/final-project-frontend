@@ -11,7 +11,7 @@ import {UserApiService} from './services/user-api.service';
 export class AppComponent {
   title = 'app';
 
-  constructor (private userThang: UserApiService,
+  constructor (public userThang: UserApiService,
                private routerThang: Router) {}
 
   ngOnInit () {

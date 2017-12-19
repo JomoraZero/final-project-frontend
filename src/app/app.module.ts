@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import {UserApiService} from './services/user-api.service';
+import {PostApiService} from './services/post-api.service';
 
 
 
@@ -13,6 +14,13 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from './about/about.component';
+import { AlbumListComponent } from './album-list/album-list.component';
+import { AlbumDetailsComponent } from './album-details/album-details.component';
+import { AddAlbumComponent } from './add-album/add-album.component';
+import { SpotifyFrameComponent } from './spotify-frame/spotify-frame.component';
+import { HelpComponent } from './help/help.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 
 @NgModule({
@@ -21,7 +29,14 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     LoginComponent,
     HomePageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent,
+    AlbumListComponent,
+    AlbumDetailsComponent,
+    AddAlbumComponent,
+    SpotifyFrameComponent,
+    HelpComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +45,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpClientModule
   ],
   providers: [
-    UserApiService
+    UserApiService,
+    PostApiService
   ],
   bootstrap: [AppComponent]
 })
